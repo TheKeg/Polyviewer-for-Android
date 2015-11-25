@@ -1,0 +1,8 @@
+MeshName=Arsh Diablo
+MeshLocation=\arsh\arsh_diablo.obj
+AlbedoLocation=\arsh\color.png
+NormalLocation=\arsh\color.png
+SpecularLocation=\arsh\color.png
+BackgroundImage=
+CameraPos=0,20,20
+CameraTar=0,14,0

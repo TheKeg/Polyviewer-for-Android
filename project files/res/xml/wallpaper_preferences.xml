@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:seekpref="http://schemas.android.com/apk/res/com.fusedresistance.polyviewer.pro"
+        android:title="@string/polyviewer_settings"
+        android:key="polyviewer_wallpaper_settings">
+	 
+    <PreferenceCategory
+        android:title="Model">
+        
+        <ListPreference
+            android:key="pref_selectModel"
+            android:title="Select Model"
+            android:summary="Select the model to display for the live wallpaper"
+            android:enabled="true"
+            android:persistent="true" />
+        
+        <Preference
+            android:key="pref_selectTexture"
+            android:title="Select Textures"
+            android:summary="Select which texture channels to display or to view the wireframe"
+            android:enabled="true"
+            android:persistent="true" />
+        
+    </PreferenceCategory>
+
+	 <PreferenceCategory
+	     android:title="Display Settings" >
+    		
+	     	<ListPreference
+            android:key="pref_selectDisplayMode"
+            android:title="Select Display Mode"
+            android:summary="Select the way to display the models"
+            android:enabled="true"
+            android:persistent="true" />
+	     	
+	     	<com.fusedresistance.polyviewer.settings.SeekBarPreference
+		        android:key="pref_angleSlider"
+		        android:title="Rotation Amount"
+		        android:dialogTitle="Set the amount of rotation for the camera or model."
+		        android:persistent="true"
+		        android:defaultValue="0"
+		        seekpref:minValue="-180"
+		        seekpref:maxValue="180"
+		    />
+ 	   
+	 	   <ListPreference
+            android:key="pref_rotationDirection"
+            android:title="Rotation Direction"
+            android:summary="Clockwise"
+            android:persistent="true" />
+	     	
+    </PreferenceCategory>
+	 
+	 <PreferenceCategory 
+	     android:title="Visuals">
+		    
+		    <com.fusedresistance.polyviewer.settings.SeekBarPreference
+		        android:key="pref_brightness"
+		        android:title="Brightness"
+		        android:dialogTitle="Set the brightness percentage"
+		        android:persistent="true"
+		        android:defaultValue="100"
+		        seekpref:minValue="1"
+		        seekpref:maxValue="200"
+		    />
+		    
+		    <com.fusedresistance.polyviewer.settings.SeekBarPreference
+		        android:key="pref_emissive"
+		        android:title="Emissive"
+		        android:summary="Emissive Strength Percent"
+		        android:persistent="true"
+		        android:defaultValue="100"
+		        seekpref:minValue="1"
+		        seekpref:maxValue="400"
+		    />
+		    
+		    <ListPreference
+		    	  android:key="pref_fpsLimit"
+		    	  android:title="FPS Limit"
+		    	  android:entries="@array/fpsNames"
+		    	  android:entryValues="@array/fpsValues"
+		    	  android:defaultValue="0"
+		    	  android:persistent="true"
+		    />
+		    
+		    <com.fusedresistance.polyviewer.settings.SeekBarPreference
+		        android:key="pref_cameraFOV"
+		        android:title="Field of View"
+		        android:summary="Set the field of view of the camera"
+		        android:persistent="true"
+		        android:defaultValue="90"
+		        seekpref:minValue="1"
+		        seekpref:maxValue="180"
+		    />
+		    	
+		    <Preference
+		        android:key="pref_lightPreset"
+		        android:title="Default Light Preset"
+		        android:persistent="true"
+		        android:enabled="true"
+	       />
+		    
+		    <CheckBoxPreference
+		        android:key="pref_showBackground"
+		        android:title="Show Background Image"
+		        android:summaryOn="Disable the background image."
+		        android:summaryOff="Enable the background image."
+		        android:enabled="true"
+		        android:persistent="true"
+		    />
+		    
+		    <Preference
+		    	  android:key="pref_selectBackground"
+		    	  android:title="Select Background Image"
+		    	  android:summary="Choose an image from the gallery"
+		    	  android:enabled="false"
+		    	  android:persistent="true" />
+		    
+		    <com.fusedresistance.polyviewer.colorpicker.ColourPickerPreference
+		      android:key="pref_backgroundColour"
+		      android:title="Select Background Colour"
+		      android:summary="Choose the background colour."
+		      android:enabled="true"
+		      android:defaultValue="0xFF333333"
+		      android:persistent="true" />
+		    	    
+    </PreferenceCategory>
+	 
+	 <PreferenceCategory
+	     android:title="Reset Values" >
+		    <Preference
+		    	  android:key="pref_reset"
+		    	  android:title="Reset to Default Values"
+		    	  android:summary="Resets the variables to their default values." />
+	</PreferenceCategory>
+	 
+	 <PreferenceCategory
+	     android:title="About Polyviewer Pro Live Wallpaper" >
+		    <Preference
+		    	  android:key="pref_aboutLink"
+		    	  android:title="Polyviewer Pro Live Wallpaper"
+		    	  android:summary="By: Craig &quot;TheKeg&quot; Young 2012"
+		    />
+	</PreferenceCategory>		    
+
+</PreferenceScreen>

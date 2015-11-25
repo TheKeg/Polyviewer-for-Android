@@ -1,0 +1,17 @@
+precision mediump float;
+
+uniform sampler2D diffuseTexture;
+uniform float brightness;
+
+varying vec3 vNormal;
+varying vec3 vWorldPos;
+varying vec2 vTextureCoord;
+
+void main()
+{
+	vec4 textureVal = texture2D(diffuseTexture, vTextureCoord) * brightness;
+	
+	textureVal.a = 1.0;
+	
+	gl_FragColor = textureVal;
+}

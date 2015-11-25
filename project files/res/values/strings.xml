@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Polyviewer</string>
+    <string name="view_model_text">View Model</string>
+    <string name="options_text">Options</string>
+    <string name="gallery_text">Gallery</string>
+    <string name="polyviewer_settings">Polyviewer Lite Wallpaper Settings</string>
+    <string name="retrieve_model_text">Cloud Storage</string>
+    <string name="help_text">Help</string>
+    <string name="textOn">ON</string>
+    <string name="textOff">OFF</string>
+    <string name="folder_text">Within the polyviewer folder, each model or multiple models you wish to display must be sorted into seperate folders which should contain all the contents of the scene you wish to display.</string>
+    <string name="naming_text">The only currently supported file format for the viewer is OBJ. Do note that multiple meshes and material files are currently ignored by the file loader. \n\n The naming convention used for defining the textures, as demonstrated in the example image above, uses the convention of mesh name followed by one of the following descriptions: \n\n * _diffuse or .D \n * _specular or .S \n * _normal or .N \n * _emissive or .E</string>
+    <string name="multi_text">Multiple models is supported by seperating each model and texture set by a unique name and file. If multiple models use the same texture, it is recommended to merge the models together.</string>
+    <string name="misc_title_text">Miscellaneous Details</string>
+    <string name="misc_text">For each model a \"pvm\" file is created when a model is loaded for the first time. This file should not be deleted as this is a streamlined binary representation of the model and helps improve future loading times. </string>
+    <string name="limitations_title_text">Limitations</string>
+    <string name="limitations_text">There are currently a few limitations within the application: \n\n * Texture formats supported: jpg, png, bmp, gif \n * No multiple mesh support for obj files \n * No smoothing group support for obj files</string>
+    <string name="location_text">Creation of the polyviewer folder can be placed either on your phone\'s internal memory or on an external micro SD storage device. The location of the folder can be placed where preferred. The default locations that are checked are the root directory or in the data sub directory of your phone\'s memory.\n\n If any errors occur, attempt locating the polyviewer folder such that the directory looks like either of the following: \n\nmnt/sdcard/polyviewer \nmnt/sdcard/data/polyviewer.</string>
+    <string name="features_text">Polyviewer for Android supports the following features: \n\n * Normal mapping \n * Specular lighting \n * Wireframe overlay \n * Camera and Light presets \n * Live wallpaper \n * Individual full bright texture option \n * Specular alpha channel controls roughness (black being smooth and white being rough)</string>
+    <string name="interface_title_text">Icons</string>
+    <string name="controls_text">Basic controlsare as follows: \n * Drag finger to rotate the camera or light. \n * pinch to zoom in/out \n * 3 fingers to pan</string>
+    <string name="texture_text">This icon will bring up the texture selection options.</string>
+    <string name="option_text">This icon will bring up the options.</string>
+    <string name="menu_text">This icon brings up the navigation menu.</string>
+    <string name="camera_text">These icons represent the currently selected item. Either the camera or the selected light with the corresponding number displayed in the icon. \n\nWhen a light is selected, 3 icons will appear in the top right corner. the checkbox will toggle the light on and off. While the D and S colored boxes represent the diffuse and specular color values for the specified light.</string>
+    <string name="light_text"></string>
+    <string name="options_string">Options</string>
+    <string name="options_icon_description">Settings Icon</string>
+    <string name="fullscreen_button_description_string">Fullscreen Toggle</string>
+    <string name="model_refresh_string">Refresh Model List</string>
+    <string-array name="helpSections">
+        <item>Features</item>
+        <item>Interface</item>
+        <item>Drives</item>
+        <item>Folders</item>
+        <item>Naming</item>
+        <item>Multiple Meshes</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="selectionList">
+        <item>Camera</item>
+        <item>Light #1</item>
+        <item>Light #2</item>
+        <item>Light #3</item>
+    </string-array>
+    <string-array name="fpsNames">
+        <item>Unlimited</item>
+        <item>60 FPS</item>
+        <item>30 FPS</item>
+        <item>15 FPS</item>
+    </string-array>
+    <integer-array name="fpsValues">
+        <item>0</item>
+        <item>16</item>
+        <item>33</item>
+        <item>66</item>
+    </integer-array>
+    <string-array name="textureModes">
+        <item>Wireframe</item>
+        <item>FullBright</item>
+        <item>Diffuse</item>
+        <item>Normal</item>
+        <item>Specular</item>
+        <item>Emissive</item>
+    </string-array>
+    <integer-array name="textureValues">
+        <item>64</item>
+        <item>32</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+    </integer-array>
+    <string-array name="displayModes">
+        <item>Static View</item>
+        <item>Rotate the Scene</item>
+        <item>Orbit the Camera</item>
+        <item>Homescreen Scene Rotation</item>
+        <item>Homescreen Camera Rotation</item>
+        <item>Homescreen Camera Target Rotation</item>
+        <item>Homescreen Camera Pan</item>
+    </string-array>
+    <string-array name="displayModeValues">
+	     <item>0</item>
+	     <item>1</item>
+	     <item>2</item>
+	     <item>3</item>
+	     <item>4</item>
+	     <item>5</item>
+	     <item>6</item>
+	 </string-array>
+	 <string-array name="rotationDirection">
+        <item>Clockwise</item>
+        <item>Counter-Clockwise</item>
+    </string-array>
+    <string-array name="rotationValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

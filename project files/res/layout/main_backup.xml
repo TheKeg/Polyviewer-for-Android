@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="horizontal">
+   
+   <LinearLayout
+      android:layout_weight="1"
+	   android:layout_width="wrap_content"
+	   android:layout_height="fill_parent"
+	   android:orientation="vertical">	
+	   <ImageButton
+	       android:id="@+id/view_model"
+	       android:name="viewModelButton"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginBottom="5dp"
+	       android:layout_width="96dp"
+	       android:layout_height="96dp"
+	       android:layout_gravity="center_horizontal"
+	       android:background="@null"
+	       android:scaleType="fitCenter"
+	       android:src="@drawable/model_icon" />
+	    
+	   <TextView
+	      android:id="@+id/view_model_text"
+	      android:name="viewModelText"
+	      android:layout_marginBottom="15dp"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="@string/view_model_text" />
+	   
+	   <ImageButton
+	       android:id="@+id/model_retreival"
+	       android:name="retrieveModelButton"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginBottom="5dp"
+	       android:layout_width="96dp"
+	       android:layout_height="96dp"
+	       android:layout_gravity="center_horizontal"
+	       android:background="@null"
+	       android:scaleType="fitCenter"
+	       android:state_enabled="false"
+	       android:src="@drawable/storage_icon_off" />
+	    
+	   <TextView
+	      android:id="@+id/retrieve_model_text"
+	      android:name="retrieveModelText"
+	      android:layout_marginBottom="15dp"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="@string/retrieve_model_text" />
+	   
+	   
+	   <ImageButton
+	       android:id="@+id/options_button"
+	       android:name="optionsButton"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginBottom="5dp"
+	       android:layout_width="96dp"
+	       android:layout_height="96dp"
+	       android:layout_gravity="center_horizontal"
+	       android:background="@null"
+	       android:scaleType="fitCenter"
+	       android:src="@drawable/settings_icon" />
+	    
+	   <TextView
+	      android:id="@+id/options_text"
+	      android:name="optionsText"
+	      android:layout_marginBottom="15dp"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="@string/options_text" />
+	</LinearLayout>
+	
+   <LinearLayout
+      android:layout_weight="1"
+	   android:layout_width="wrap_content"
+	   android:layout_height="fill_parent"
+	   android:orientation="vertical">
+	   
+      <ImageButton
+	       android:id="@+id/gallery_view"
+	       android:name="viewGalleryButton"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginBottom="5dp"
+	       android:layout_width="96dp"
+	       android:layout_height="96dp"
+	       android:layout_gravity="center_horizontal"
+	       android:background="@null"
+	       android:scaleType="fitCenter"
+	       android:src="@drawable/gallery_icon" />
+	    
+	   <TextView
+	      android:id="@+id/gallery_text"
+	      android:name="galleryText"
+	      android:layout_marginBottom="15dp"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="@string/gallery_text" />
+	   	   
+	   <ImageButton
+	       android:id="@+id/help_activity"
+	       android:name="helpButton"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginBottom="5dp"
+	       android:layout_width="96dp"
+	       android:layout_height="96dp"
+	       android:layout_gravity="center_horizontal"
+	       android:background="@null"
+	       android:scaleType="fitCenter"
+	       android:state_enabled="false"
+	       android:src="@drawable/help_icon_off" />
+	    
+	   <TextView
+	      android:id="@+id/help_text"
+	      android:name="helpText"
+	      android:layout_marginBottom="15dp"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_gravity="center_horizontal"
+	      android:text="@string/help_text" />
+ 	</LinearLayout>
+</LinearLayout>

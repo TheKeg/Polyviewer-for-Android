@@ -1,0 +1,185 @@
+body
+{
+	background-color: #333333;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #AAAAAA;
+	width: 900px;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1.polyTitle
+{
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 5em;
+}
+
+h1.polySubTitle
+{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.5em;	
+	font-family: 'Ubuntu Condensed', sans-serif;
+	position: relative;
+	top: -70px;
+	left: 85px;
+}
+
+h1.features
+{
+	color: #FFFFFF;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 2.0em;
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+
+img.polyImg
+{
+	float: left;
+	left: 0px;
+	margin-top: 20px;
+}
+
+.floatLeft
+{
+	float: left;
+	left: 0px;
+	margin-right: auto;
+	width: 40%;
+	height: 40%;
+}
+
+.floatRight
+{
+	float: right;
+	right: 0px;
+	margin-left: auto;
+	width: 40%;
+	height: 40%;
+}
+
+p.justified
+{
+	text-align: justify;
+	font-size: 1.1em;
+}
+
+div.polyTitle
+{
+	clear: both;
+	float: left;
+	right: 0;
+}
+
+div.textureFeatures
+{
+	clear: both;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+div.meshFeatures
+{
+	clear: both;
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+div.lightFeatures
+{
+	clear: both;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+div.wallpaper
+{
+	clear: both;
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+div.setup
+{
+	clear: both;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+
+ul.features
+{
+	font-size: 1.1em;
+}
+
+ul.wallpaperList
+{
+	padding-left: 24em;
+	text-align: left;
+}
+
+p.details
+{
+	text-align: center;
+	margin: 0 auto;
+}
+
+p.navBar
+{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background: #333333;
+	color: #555555;
+	list-style-type: none;
+	padding: 10px;
+}
+
+a.navBar
+{
+	text-align: center;
+	color: #FFFFFF;
+}
+
+a.features
+{
+	color: #777777;
+}
+
+a:link 		{ text-decoration: underline; }
+a:visited 	{ text-decoration: underline; }
+a:hover 	{ text-decoration: underline; }
+a:active 	{ text-decoration: underline; }
+
+.dg-picture-zoom
+{
+	cursor : pointer;
+	width: 90%;
+	margin-top: 40px;
+	margin-left: 10px; 
+	margin-right: 10px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #111111;
+	border-radius: 8px;
+}
+.dg-picture-zoom-large
+{
+	cursor : pointer;
+}
+.dg-picture-zoom-border-container
+{
+	position: absolute;
+    border : 10px solid #111111;
+    background-color: #111111;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="description" content="A Real-time model viewing application for Android 2.2 and above devices." />
+		<meta name="keywords" content="Polyviewer,Android,Real-Time" />
+		<meta name="author" content="Craig A Young" />
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+		<title>Polyviewer for Android</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link href="website/css/polyviewer.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="website/js/external/mootools-1.2.4-core-yc.js"></script>
+		<script type="text/javascript" src="website/js/external/mootools-more.js"></script>
+		<script type="text/javascript" src="website/js/dg-picture-zoom.js"></script> 
+		<script type="text/javascript" src="website/js/dg-picture-zoom-autoload.js"></script> 
+
+		<script language="JavaScript">
+			<!-- This script and many more are available free online at -->
+			<!-- The JavaScript Source!! http://www.javascriptsource.com -->
+
+			var dgPictureZoom = new DG.PictureZoom();
+
+			<!-- Begin
+			function movepic(img_name,img_src) 
+			{
+				document.images[img_name].id = img_src;
+				document.images[img_name].src= img_src;
+
+				dgPictureZoom.addPicture(img_src);
+			}
+			// End -->
+		</script>
+	</head>
+
+	<body>
+		<a name="home"></a>
+		<p class="navBar">
+			<a class="navBar" href="#home">Home</a> | 
+			<a class="navBar" href="#textures">Texture Features</a> | 
+			<a class="navBar" href="#mesh">Models</a> | 
+			<a class="navBar" href="#lights">Lights</a> | 
+			<a class="navBar" href="#wallpaper">Live Wallpaper</a> | 
+			<a class="navBar" href="#setup">Setup & Example</a>
+		</p>
+
+		<!-- Container for the Main Title, image and blurb -->
+		<div class="polyTitle">
+			<img class="polyImg" src="website/Images/Polyviewer.png" alt="Polyviewer for Android" />
+			<h1 class="polyTitle">Polyviewer</h1>
+			<h1 class="polySubTitle">for Android</h1>	
+
+			<p class="justified">
+				Polyviewer for Android is an application designed for the purpose of allowing a game artist to display their portfolio in real-time.
+				Artists can display multiple models together to form a scene or display pieces individually. 
+			</p>
+
+			<p>
+				Example models are available for download <a class="navBar" href="http://sites.google.com/site/polyviewer/PolyviewerExample.zip">here</a>
+			</p>
+
+			<p>
+				<br/><h2 class="github">Github Repository: 
+					<a href="http://play.google.com/store/apps/details?id=com.fusedresistance.polyviewer.pro">Polyviewer for Android</a>
+				</h2>
+			</p>
+		</div>
+
+		<!-- Container for the texture options -->
+		<div class="textureFeatures">
+			<div class="floatRight">
+				<img name="featuresImg" class="dg-picture-zoom" src="website/Images/emissive_off_example.png?url=Images/emissive_off_example.png" alt="texture options"/>
+			</div>
+			<a name="textures"></a>
+			<h1 class="features">Texturing Features</h1>
+
+			<p class="justified">
+				Polyviewer supports the following features:
+			</p>
+
+			<!-- Replace each with a link to change the image to the right. -->
+			<ul class="features">
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/normal_mapping.png?url=Images/normal_mapping.png')">
+						Normal mapping
+					</a>
+				</li>
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/greentooth.png?url=Images/greentooth.png')">
+						Specular highlights
+					</a>
+				</li>
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/multi_mesh_wireframe.png?url=Images/multi_mesh_wireframe.png')">
+						Wireframe Overlay
+					</a>
+				</li>
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/fullbright_image_combo.png?url=Images/fullbright_image_combo.png')">
+						Unlit texture display
+					</a>
+				</li>
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/emissive_on_example.png?url=Images/emissive_on_example.png')">
+						Emissive textures (Pro only)
+					</a>
+				</li>
+				<li>
+					<a class="features" onMouseOver="movepic('featuresImg','website/Images/gallery.png?url=Images/gallery.png')">
+						Gallery mode (Pro only)
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- Container for the multiple mesh details -->
+		<div class="meshFeatures">
+			<div class="floatLeft">
+				<img class="dg-picture-zoom" src="website/Images/multi_mesh_diablo.png?url=Images/multi_mesh_diablo.png" alt="texture options" />
+			</div>
+			<a name="mesh"></a>
+			<h1 class="features">Models</h1>
+
+			<p class="justified">
+				Polyviewer supports the loading of OBJ files. Support within an OBJ file is currently limited to one model per file, this is subject to change in the future. Additionally relative indices are supported and smoothing groups are not currently supported. Polyviewer also allows for the use of multiple meshes to be displayed simultaneously. By placing each model and textures used into separate obj files,
+				the application will automatically load each mesh and texture set based upon the name used for the model file.
+			</p>
+
+			<a class="navBar" href="#home">Back to the top</a>
+
+		</div>
+
+		
+
+		<!-- Container for the multiple light details -->
+		<div class="lightFeatures">
+			<div class="floatRight">
+				<a onMouseOver="movepic('lights','website/Images/two_lights.png?url=Images/two_lights.png')"
+				   onMouseOut="movepic('lights','website/Images/two_lights_diffuse.png?url=Images/two_lights_diffuse.png')">
+					<img name="lights" class="dg-picture-zoom" src="website/Images/two_lights_diffuse.png?url=Images/two_lights_diffuse.png" alt="Light Options" />
+				</a>
+			</div>
+			<a name="lights"></a>
+			<h1 class="features">Lights</h1>
+
+			<p class="justified">
+				Polyviewer supports using a single light with diffuse and specular colour options. Polyviewer Pro allows for up to 3 lights as well as the ability to save your own presets. When a light is selected, a helper pointer is displayed showing the direction the light is pointing.
+			</p>
+
+			<a class="navBar" href="#home">Back to the top</a>
+
+		</div>
+
+		<!-- Container for the live wallpaper details -->
+		<div class="wallpaper">
+			<div class="floatLeft">
+				<img class="dg-picture-zoom" src="website/Images/tardis_wallpaper.png?url=Images/tardis_wallpaper.png" alt="live wallpaper" />
+			</div>
+			<a name="wallpaper"></a>
+			<h1 class="features">Live Wallpaper</h1>
+
+			<p class="justified">
+				Also included as part of the polyviewer application is a live wallpaper option for viewing models as part of your background. 
+				The following display options are available to live wallpapers:
+			</p>
+
+			<ul class="wallpaperList">
+				<li>Background Image (Static or based on current homescreen)</li>
+				<li>Static View</li>
+				<li>Rotate the scene constantly</li>
+				<li>Orbit the camera constantly</li>
+				<li>Rotate the scene based on the homescreen position</li>
+				<li>Orbit the camera based on the homescreen position</li>
+			</ul>
+
+			<a class="navBar" href="#home">Back to the top</a>
+
+		</div>
+
+		<!-- Container for the multiple mesh details -->
+		<div class="setup">
+			<div class="floatRight">
+				<img class="dg-picture-zoom" src="website/Images/file_layout.png?url=Images/file_layout.png" alt="texture options" />
+			</div>
+			<a name="setup"></a>
+			<h1 class="features">Setup</h1>
+
+			<p class="justified">
+				Setup for polyviewer involves the creation of a polyviewer folder within your primary sdcard location or within the data sub folder. Alternatively 
+				you may place a folder on your microSD card (if available). Polyviewer will do a quick scan of folders on it's first run looking for any folder 
+				named polyviewer and stores all found folders to a data for faster access in the future. By default the following folders are always looked for:
+			</p>
+
+			<ul class="features">
+				<li>mnt/sdcard/polyviewer</li>
+				<li>mnt/sdcard/data/polyviewer</li>
+			</ul>
+
+			<p>
+				Currently only OBJ files are supported with the restriction of a single mesh per file at the moment. Triangulated and Quad based meshes 
+				are supported, with triangulated meshes being the preferred route. Meshes are based upon the y-axis being the up axis. 
+			</p>
+
+			<p>
+				For textures: gif, jpg, png and bmp are supported with alpha channels being supported for the specular channel's roughness control (black being 
+				smooth and white being rough). The naming convention follows that similar to the image to the right. Such that each texture should be prefaced 
+				the name of the obj file and followed by one of the following suffixes:
+			</p>
+
+			<ul class="features">
+				<li>_diffuse or .D (eg. model_diffuse.png or model.D.png)</li>
+				<li>_normal or .N (eg. model_normal.png or model.N.png)</li>
+				<li>_specular or .S (eg. model_specular.png or model.S.png)</li>
+				<li>_emissive or .E (eg. model_emissive.png or model.E.png)</li>
+			</ul>
+
+			<p>
+				Multiple meshes are supported through the usage of unique names for each mesh and texture set. It is recommended that for meshes that share the same texture for them to be merged before exporting.
+			</p>
+
+			<p>
+				An example scene is available for download as a zip file here: <a class="navBar" href="http://sites.google.com/site/polyviewer/PolyviewerExample.zip">download</a>
+			</p>
+
+
+			<a class="navBar" href="#home">Back to the top</a>
+
+		</div>
+
+		<p class="details">
+			Greentooth logo used with permission of Polycount, all rights of respective models are owned by their original artists.
+		</p>
+		<p class="details">
+			Craig A Young - Copyright 2012
+		</p>
+
+	</body>
+</html>

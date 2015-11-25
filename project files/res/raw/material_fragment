@@ -1,0 +1,94 @@
+
+precision mediump float;
+
+uniform sampler2D diffuseSampler;
+uniform sampler2D normalSampler;
+uniform sampler2D specularSampler;
+
+uniform vec3 uLightDir;
+uniform vec3 uEyeDir;
+uniform float ambient;
+uniform float brightness;
+uniform mat3 lightDiffuse;
+uniform mat3 lightSpec;
+uniform mat3 lightDir;
+
+varying vec2 vTextureCoord;
+varying vec3 vTangent;
+varying vec3 vBinormal;
+varying vec3 vNormal;
+
+float Fresnel(in float VdotH, in float val)
+{
+	float base = 1.0 - VdotH;
+	float exponential = pow(base, 4.0);
+
+	return exponential + (val * (1.0 - exponential));
+}
+
+float BlinnPhong(in vec3 normal, in vec3 viewDir, in vec3 light, in float gloss, in float specCol)
+{
+	vec3 halfVec = normalize(light + viewDir);
+	float HdotN = dot(normal, halfVec);
+	float NdotL = dot(normal, light);
+	float VdotH = dot(viewDir, halfVec);
+	float NdotV = dot(normal, normalize(viewDir));
+
+	float spec = pow(HdotN, gloss);
+	float norm = (gloss + 2.0) / 8.0;
+	float fres = Fresnel(VdotH, specCol);
+	spec = max(0.0, spec * norm * fres);
+	
+	return spec;//vec4(lightSpec[0].xyz * spec, 0.0);
+}
+
+void main()
+{
+	vec4 textureVal = vec4(0.9, 0.9, 0.9, 1.0);//texture2D(diffuseSampler, vTextureCoord);
+	vec4 normalVal = vec4(vNormal.xyz, 0.0);//texture2D(normalSampler, vTextureCoord);
+	vec4 specularVal = vec4(0.5, 0.5, 0.5, 0.5);//texture2D(specularSampler, vTextureCoord);
+
+	vec3 N = vNormal;
+	vec3 E = normalize(-uEyeDir);
+	vec3 L = -lightDir[0];
+	vec3 R = vec3(0.0, 0.0, 0.0);
+
+#ifdef DIFFUSEMAP
+	textureVal = texture2D(diffuseSampler, vTextureCoord);
+#endif
+
+#ifdef SPECULARMAP
+	specularVal = texture2D(specularSampler, vTextureCoord);
+#endif
+
+#ifdef NORMALMAP
+	normalVal = texture2D(normalSampler, vTextureCoord);
+	mat3 tangentMatrix = mat3(vTangent, vBinormal, vNormal);
+	
+	N = normalize(tangentMatrix * ((normalVal.xyz * 2.0) - 1.0));
+#endif
+
+	float specVal = max(specularVal.x, max(specularVal.y, specularVal.z));
+	float gloss = (specularVal.w) * 255.0;
+	
+	vec3 diffuseAmt = vec3(0.0, 0.0, 0.0);
+	vec3 specAmt = vec3(0.0, 0.0, 0.0);
+
+	for(int index = 0; index < 3; index++)
+	{
+		L = normalize(-lightDir[index]);
+		R = reflect(L, N);
+		
+		diffuseAmt += (max(dot(N, L), ambient) * brightness) * lightDiffuse[index];
+		
+#ifdef SPECULARMAP
+		specAmt += BlinnPhong(N, E, L, gloss, specVal) * lightSpec[index];
+#endif
+
+	}
+	
+	vec3 diffuse = textureVal.xyz * diffuseAmt;
+	vec3 specular = specularVal.xyz * specAmt;
+	
+	gl_FragColor = vec4(diffuse + specular, textureVal.a); 
+}

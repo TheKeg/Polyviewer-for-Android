@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/menu_frame"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              style="@style/PolyBackground" >
+
+    <RelativeLayout
+            android:id="@+id/options_menu_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+        <ImageView
+                android:id="@+id/fullscreenButton"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fullscreen_icon"
+                android:contentDescription="@string/fullscreen_button_description_string"/>
+
+        <TextView
+                style="@style/PolyText"
+                android:id="@+id/menu_title_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="24sp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="Polyviewer" />
+
+        <TextView
+                style="@style/PolyText.Light"
+                android:id="@+id/menu_title_bar"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/menu_title_text"
+                android:layout_height="4dp"
+                android:layout_width="fill_parent"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/menu_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="#00000000" >
+
+
+        <ExpandableListView
+                android:id="@+id/file_expandable_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        <LinearLayout
+                android:id="@+id/model_refresh_menu_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+            <ImageView
+                    android:id="@+id/refresh_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/refresh_icon"
+                    android:contentDescription="@string/options_icon_description"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/menu_refresh_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/model_refresh_string"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/settings_menu_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+            <ImageView
+                    android:id="@+id/options_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/settings_icon"
+                    android:contentDescription="@string/options_icon_description"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/menu_settings_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/options_string"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

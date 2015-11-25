@@ -1,0 +1,19 @@
+uniform mat4 mvpMatrix;
+uniform vec2 uvOffset;
+uniform int useOffset;
+
+attribute vec4 aPosition;
+attribute vec3 aNormal;
+attribute vec2 aTextureCoord;
+
+varying vec2 vTextureCoord;
+
+void main()
+{	
+	vTextureCoord = aTextureCoord;
+	
+	if(useOffset == 1)
+		vTextureCoord += uvOffset;
+	
+	gl_Position = mvpMatrix * aPosition;
+}

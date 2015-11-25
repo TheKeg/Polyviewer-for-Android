@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   <style name="PolyText">
+       <item name="android:textColor">#CCCCCC</item>
+       <item name="android:background">#00000000</item>
+   </style>    
+   
+   <style name="PolyText.Light">
+       <item name="android:textColor">#333333</item>
+       <item name="android:background">#00000000</item>
+   </style>
+   
+   <style name="PolyBackground">
+       <item name="android:background">#333333</item>
+   </style>
+   
+   <style name="PolyBackground.Light">
+       <item name="android:background">#CCCCCC</item>
+   </style>
+   
+   <style name="PolyPreference">
+       <item name="android:textColor">#CCCCCC</item>
+       <item name="android:background">#333333</item>
+   </style> 
+   
+   <style name="PolyPreference.Light">
+       <item name="android:textColor">#333333</item>
+       <item name="android:background">#CCCCCC</item>
+   </style>
+   
+</resources>

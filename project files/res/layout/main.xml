@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent" >
+   
+   <ImageButton
+       android:id="@+id/view_model"
+       android:name="viewModelButton"
+       android:layout_width="128dp"
+       android:layout_height="128dp"
+       android:layout_centerInParent="true"
+       android:background="@null"
+       android:scaleType="fitCenter"
+       android:src="@drawable/wireframe_cube" />
+	    
+   <TextView
+      android:id="@+id/view_model_text"
+      android:name="viewModelText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_below="@id/view_model"
+      android:layout_centerHorizontal="true"
+      android:text="@string/view_model_text" />
+	   
+</RelativeLayout>

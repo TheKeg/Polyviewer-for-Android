@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wallpaper
+   name="Polyviewer Wallpaper"
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:settingsActivity="com.fusedresistance.polyviewer.pro.wallpaper.WallpaperSettings"
+   android:thumbnail="@drawable/polyviewer_icon"
+/>

@@ -1,0 +1,29 @@
+precision mediump float;
+
+uniform sampler2D blurSampler;
+uniform sampler2D glowSampler;
+
+uniform float blurStrength;
+
+varying vec3 vNormal;
+varying vec2 vTextureCoord;
+
+void main()
+{
+	vec2 uvCoords = vec2(vTextureCoord.x, 1.0 - vTextureCoord.y);
+	vec4 emissiveVal = texture2D(glowSampler, uvCoords);
+	vec4 sum = vec4(0.0);
+  	float strength = 0.003 * blurStrength;
+  	
+  	sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y - 4.0 * strength)) * 0.05;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y - 3.0 * strength)) * 0.09;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y - 2.0 * strength)) * 0.12;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y - strength)) * 0.15;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y)) * 0.16;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y + strength)) * 0.15;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y + 2.0 * strength)) * 0.12;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y + 3.0 * strength)) * 0.09;
+   sum += texture2D(blurSampler, vec2(uvCoords.x, uvCoords.y + 4.0 * strength)) * 0.05;
+	
+	gl_FragColor = vec4(emissiveVal.xyz + (sum.xyz * blurStrength), 1.0); // 
+}

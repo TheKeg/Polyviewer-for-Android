@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	
+	    <View
+	        android:id="@+id/colour_panel"
+	        android:layout_width="64dp"
+	        android:layout_height="204dp"
+	        android:background="#FF0000"
+	        android:padding="10dp" />
+		 
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:padding="5dp" >
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:name="RedTextTag"
+	            android:text="Red" />
+	        
+	        <LinearLayout 
+	            android:layout_width="300dp"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	            
+	            <EditText 
+	               android:id="@+id/redTextValue"
+	               android:layout_width="55dp"
+	            	android:layout_height="wrap_content" 
+	            	android:text="255" 
+	            	android:inputType="number" />
+	
+	            <SeekBar
+	                android:id="@+id/redSeekBar"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_centerVertical="true"
+	                android:layout_gravity="center_vertical"
+	                android:max="255"
+	                android:progress="0" />	
+	            
+	        </LinearLayout>
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:name="GreenTextTag"
+	            android:text="Green" />
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	            
+	            <EditText 
+	               android:id="@+id/greenTextValue"
+	               android:layout_width="55dp"
+	            	android:layout_height="wrap_content" 
+	            	android:text="0"
+	            	android:inputType="number" />
+	
+	            <SeekBar
+	                android:id="@+id/greenSeekBar"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_centerVertical="true"
+	                android:layout_gravity="center_vertical"
+	                android:max="255"
+	                android:progress="0" />
+	            
+	        </LinearLayout>
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:name="BlueTextTag"
+	            android:text="Blue" />
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	            
+	            <EditText 
+	               android:id="@+id/blueTextValue"
+	               android:layout_width="55dp"
+	            	android:layout_height="wrap_content" 
+	            	android:text="0" 
+	            	android:inputType="number" />
+	
+	            <SeekBar
+	                android:id="@+id/blueSeekBar"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_centerVertical="true"
+	                android:layout_gravity="center_vertical"
+	                android:max="255"
+	                android:progress="0" />
+	            
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+       
+	    <LinearLayout 
+         android:layout_width="90dp"
+         android:layout_height="fill_parent"
+         android:orientation="vertical">
+           
+
+        <Button
+            android:id="@+id/colour_dialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Cancel" />
+        
+        <Button
+            android:id="@+id/colour_dialog_okay"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="OK" />
+           
+    </LinearLayout>	    
+    
+	</LinearLayout>
+        
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/modelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Model Information"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+    <View   
+	     android:id="@+id/firstDivider"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#88888888"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp" />
+    
+    <TextView
+        android:id="@+id/meshDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Model Formatting:
+        * Obj File Format (triangle/quads supported)" />
+	 
+    <TextView
+        android:id="@+id/textureDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texture Formatting:
+        * Must contain the obj file name
+        * Must contain a suffix for the texture. 
+        (diffuse, specular, normal, emissive)
+        * PNG pre-multiplied alpha for alpha channel 
+        support for transparency and specular 
+        strength
+        " />
+	 
+    <TextView
+        android:id="@+id/placementInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Location"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+    <View   
+	     android:id="@+id/firstDivider2"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#88888888"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp" />
+    
+    <TextView
+        android:id="@+id/placementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A folder called 'polyviewer' should be created either within your data folder for your device or in the base directory of an sd card. Multiple models can be stored in a single sub-folder, in which case all models will be displayed together (may require some modifications before export as currently obj movement is not available within the engine). Each group of models should be placed in seperate sub-folders within the polyviewer folder. For example:
+        * data/polyviewer/model
+        * externalsd/polyviewer/model
+        " />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Controls" />
+    
+    <View   
+	     android:id="@+id/firstDivider3"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#88888888"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp" />
+
+    <TextView
+        android:id="@+id/movementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate Camera: single finger" />
+
+    <TextView
+        android:id="@+id/zoomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom Camera: pinch to zoom setup with 2 fingers" />
+
+    <TextView
+        android:id="@+id/panText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pan Camera: use three fingers" />
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+    	  android:layout_height="match_parent"
+    	  android:orientation="horizontal"
+    	  android:paddingTop="5dp">"
+    
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/content_picture" />
+
+	    <TextView
+	        android:id="@+id/textureOptions"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="5dp"
+	        android:text="This icon represents the available texture display options." />
+	    
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

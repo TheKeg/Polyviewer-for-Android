@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:seekpref="http://schemas.android.com/apk/res/com.fusedresistance.polyviewer.pro"
+	android:key="polyviewer_settings"
+	style="@style/PolyPreference">
+	 
+   <com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory 
+      style="@style/PolyPreference"
+      android:title="Visuals">
+		  
+		<com.fusedresistance.polyviewer.settings.PolyviewerPreference
+		   style="@style/PolyPreference"
+			android:key="pref_selectModel"
+			android:title="Default Model"
+			android:summary="Select the default model to load."
+			android:enabled="true"
+			android:persistent="true" />
+			     	
+     	<com.fusedresistance.polyviewer.settings.PolyviewerPreference
+     	   style="@style/PolyPreference"
+         android:key="pref_selectTexture"
+         android:title="Default Texture"
+         android:summary="Select the default texture setup."
+         android:enabled="true"
+         android:persistent="true" />
+	     
+		<com.fusedresistance.polyviewer.settings.SeekBarPreference
+		   style="@style/PolyPreference"
+		   android:key="pref_brightness"
+		   android:title="Brightness"
+		   android:summary="Set the brightness"
+		   android:persistent="true"
+		   android:defaultValue="100"
+		   seekpref:minValue="1"
+		   seekpref:maxValue="200" />
+		    
+      <com.fusedresistance.polyviewer.settings.SeekBarPreference
+		   android:key="pref_emissive"
+		   android:title="Emissive"
+		   android:summary="Emissive Strength Percent"
+		   android:persistent="true"
+		   android:defaultValue="100"
+		   seekpref:minValue="1"
+		   seekpref:maxValue="400" />
+		    
+      <com.fusedresistance.polyviewer.settings.PolyviewerListPreference
+		   android:key="pref_fpsLimit"
+		   android:title="FPS Limit"
+		   android:entries="@array/fpsNames"
+		   android:entryValues="@array/fpsValues"
+		   android:defaultValue="0"
+		   android:persistent="true" />
+		    
+	   <com.fusedresistance.polyviewer.settings.PolyviewerCheckBoxPreference
+		   android:key="pref_enabledFPS"
+		   android:title="Show FPS"
+		   android:enabled="true"
+		   android:persistent="true" />
+		    
+	   <com.fusedresistance.polyviewer.settings.SeekBarPreference
+		   android:key="pref_cameraFOV"
+		   android:title="Field of View"
+		   android:summary="Set the field of view of the camera"
+		   android:persistent="true"
+		   android:defaultValue="90"
+		   seekpref:minValue="1"
+		   seekpref:maxValue="180" />
+		    
+      <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+		   android:key="pref_lightPreset"
+		   android:title="Default Light Preset"
+		   android:persistent="true"
+		   android:enabled="true" />
+		    
+		<com.fusedresistance.polyviewer.settings.PolyviewerPreference
+		   android:key="pref_cameraPreset"
+		   android:title="Default Camera Preset"
+		   android:persistent="true"
+		   android:enabled="true" />	    
+		    
+		<com.fusedresistance.polyviewer.settings.PolyviewerCheckBoxPreference
+		   android:key="pref_showBackground"
+		   android:title="Show Background Image"
+		   android:enabled="true"
+		   android:persistent="true" />
+		    
+		<com.fusedresistance.polyviewer.settings.PolyviewerPreference
+		   android:key="pref_selectBackground"
+		   android:title="Select Background Image"
+		   android:enabled="false"
+		   android:persistent="true" />
+		    
+		<com.fusedresistance.polyviewer.colorpicker.ColourPickerPreference
+		   android:key="pref_backgroundColour"
+		   android:title="Select Background Colour"
+		   android:enabled="true"
+		   android:defaultValue="0xFF333333"
+		   android:persistent="true" />
+		    
+   </com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory>
+    
+	<com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory
+	   android:title="Misc" >
+	     
+	   <com.fusedresistance.polyviewer.settings.PolyviewerCheckBoxPreference 
+		   android:key="pref_forceSceenOn"
+		   android:title="Force screen on"
+		   android:summary="Force the app to keep the screen on."
+		   android:enabled="true"
+		   android:defaultValue="false"
+		   android:persistent="true" />
+	     
+	</com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory>
+	 
+	<com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory
+	   android:title="Gallery Settings" >
+    		
+		<com.fusedresistance.polyviewer.settings.SeekBarPreference
+		   android:key="pref_spinSpeed"
+		   android:title="Rotation Speed"
+		   android:summary="Set the rotation speed of the camera or model."
+		   android:persistent="true"
+		   android:defaultValue="2"
+		   seekpref:minValue="1"
+		   seekpref:maxValue="20" />
+		    
+		    <com.fusedresistance.polyviewer.settings.PolyviewerCheckBoxPreference 
+		    	  android:key="pref_reverseDirection"
+		    	  android:title="Reverse Rotation"
+		    	  android:summary="Reverse direction the camera or object rotates."
+		    	  android:enabled="true"
+		    	  android:defaultValue="false"
+		    	  android:persistent="true"
+		    />
+		    
+		    <com.fusedresistance.polyviewer.settings.PolyviewerCheckBoxPreference 
+		    	  android:key="pref_enableCamera"
+		    	  android:title="Orbit Camera"
+		    	  android:summaryOn="The camera will orbit around the model."
+		    	  android:summaryOff="The model will rotate in place."
+		    	  android:enabled="true"
+		    	  android:defaultValue="false"
+		    	  android:persistent="true"
+		    />
+		    
+    </com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory>
+    
+	 <com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory
+	     android:title="Reset Values" >
+		  		
+	    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+	        android:key="pref_clearPaths"
+	        android:title="Rebuild the Path Database" />
+	    
+	    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+	        android:key="pref_clearLightPresets"
+	        android:title="Reset the light preset database" />
+	    
+	    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+	        android:key="pref_clearCameraPresets"
+	        android:title="Reset the camera preset database" />
+	    
+	    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+	        android:key="pref_rebuild"
+	        android:title="Delete cached Meshes" />
+	     
+	    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+	    	  android:key="pref_reset"
+	    	  android:title="Reset to Default Values" />
+		    
+	</com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory>
+	 
+	 <com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory
+	     android:title="About Polyviewer" >
+		    <com.fusedresistance.polyviewer.settings.PolyviewerPreference
+		    	  android:key="pref_aboutLink"
+		    	  android:title="Polyviewer App"
+		    	  android:summary="By: Craig Young 2013"
+		    />
+	</com.fusedresistance.polyviewer.settings.PolyviewerPreferenceCategory>		    
+
+</PreferenceScreen>

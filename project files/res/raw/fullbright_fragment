@@ -1,0 +1,37 @@
+
+precision mediump float;
+
+uniform sampler2D diffuseSampler;
+uniform sampler2D normalSampler;
+uniform sampler2D specularSampler;
+uniform sampler2D emissiveSampler;
+
+varying vec2 vTextureCoord;
+varying vec3 vTangent;
+varying vec3 vBinormal;
+varying vec3 vNormal;
+
+void main()
+{
+	vec4 textureVal = vec4(1.0, 1.0, 1.0, 1.0);//texture2D(diffuseSampler, vTextureCoord);
+
+#ifdef DIFFUSEMAP
+	textureVal = texture2D(diffuseSampler, vTextureCoord);
+#endif
+
+#ifdef SPECULARMAP
+	textureVal = texture2D(specularSampler, vTextureCoord);
+#endif
+
+#ifdef NORMALMAP
+	textureVal = texture2D(normalSampler, vTextureCoord);
+#endif
+
+#ifdef EMISSIVEMAP
+	textureVal = texture2D(emissiveSampler, vTextureCoord);
+#endif
+	
+	textureVal.a = 1.0;
+	
+	gl_FragColor = textureVal; 
+}

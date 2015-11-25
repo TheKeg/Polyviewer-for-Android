@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="horizontal"
+   android:baselineAligned="false"
+   android:weightSum="1.2">
+   
+   <LinearLayout 
+      android:layout_width="wrap_content"
+   	android:layout_height="fill_parent"
+   	android:orientation="vertical"
+   	android:gravity="center"
+   	android:layout_weight="0.4">
+   	
+   <ImageButton
+       android:id="@+id/view_model"
+       android:name="viewModelButton"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="5dp"
+       android:layout_width="96dp"
+       android:layout_height="96dp"
+       android:layout_gravity="center"
+       android:background="@null"
+       android:scaleType="fitCenter"
+       android:src="@drawable/model_icon" />
+	    
+   <TextView
+      android:id="@+id/view_model_text"
+      android:name="viewModelText"
+      android:layout_marginBottom="15dp"
+   	android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="@string/view_model_text" />
+   
+	</LinearLayout>
+   
+   <LinearLayout 
+      android:layout_width="wrap_content"
+   	android:layout_height="fill_parent"
+   	android:orientation="vertical"
+   	android:gravity="center"
+   	android:layout_weight="0.4">
+   
+   <ImageButton
+       android:id="@+id/help_activity"
+       android:name="helpButton"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="5dp"
+       android:layout_width="96dp"
+       android:layout_height="96dp"
+       android:layout_gravity="center"
+       android:background="@null"
+       android:scaleType="fitCenter"
+       android:state_enabled="true"
+       android:src="@drawable/help_icon" />
+    
+   <TextView
+      android:id="@+id/help_text"
+      android:name="helpText"
+      android:layout_marginBottom="15dp"
+   	android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="@string/help_text" />
+	
+   </LinearLayout>
+   
+   <LinearLayout 
+      android:layout_width="wrap_content"
+   	android:layout_height="fill_parent"
+   	android:orientation="vertical"
+   	android:gravity="center"
+   	android:layout_weight="0.4">
+   	
+   <ImageButton
+       android:id="@+id/options_button"
+       android:name="optionsButton"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="5dp"
+       android:layout_width="96dp"
+       android:layout_height="96dp"
+       android:layout_gravity="center"
+       android:background="@null"
+       android:scaleType="fitCenter"
+       android:src="@drawable/settings_icon" />
+    
+   <TextView
+      android:id="@+id/options_text"
+      android:name="optionsText"
+      android:layout_marginBottom="15dp"
+   	android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="@string/options_text" />
+	  
+   </LinearLayout>
+   
+</LinearLayout>

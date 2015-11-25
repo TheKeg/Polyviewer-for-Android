@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <View
+          android:id="@+id/buffer"
+          android:name="buffer"
+        	 android:background="#000000"
+        	 android:layout_width="20dp"
+        	 android:layout_height="40dp"
+        	 android:layout_centerHorizontal="true"/>
+        
+        <TextView
+	      android:id="@+id/misc_title"
+	      android:name="miscTitle"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:layout_gravity="center"
+	      android:layout_below="@id/buffer"
+	      android:layout_margin="5dp"
+	      android:text="@string/misc_title_text"
+	      android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+	      android:id="@+id/misc_text"
+	      android:name="miscText"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:layout_gravity="center"
+	      android:layout_below="@id/misc_title"
+	      android:layout_margin="15dp"
+	      android:text="@string/misc_text"
+	      android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+        <TextView
+	      android:id="@+id/limitations_title"
+	      android:name="limitationsTitle"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:layout_gravity="center"
+	      android:layout_below="@id/misc_text"
+	      android:layout_margin="5dp"
+	      android:text="@string/limitations_title_text"
+	      android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+	      android:id="@+id/limitations_text"
+	      android:name="limitationsText"
+	   	android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:layout_gravity="center"
+	      android:layout_below="@id/limitations_title"
+	      android:layout_margin="15dp"
+	      android:text="@string/limitations_text"
+	      android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+    </RelativeLayout>
+    
+
+</ScrollView>

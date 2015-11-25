@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/PolyBackground">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/options_menu_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/options_title_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/settings_icon"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_title_text"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textSize="24sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Options"/>
+
+            <ImageView
+                    android:id="@+id/themeButton"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dark_theme"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_theme_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:textSize="12sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Dark"/>
+
+        </RelativeLayout>
+
+        <TextView
+                style="@style/PolyBackground.Light"
+                android:id="@+id/options_title_bar"
+                android:layout_height="4dp"
+                android:layout_width="fill_parent"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text=""/>
+
+        <LinearLayout
+                android:id="@+id/options_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#00000000">
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_general_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="General"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_default_textures"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Default Texture Setting"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_brightness"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Brightness"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_fps_limit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="FPS Limit"/>
+
+            <RelativeLayout
+                    android:id="@+id/options_fps_toggle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                <TextView
+                        style="@style/PolyText"
+                        android:id="@+id/options_fps_toggle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="Show FPS"/>
+
+                <de.ankri.views.Switch
+                        style="@style/switch_light"
+                        android:id="@+id/options_fps_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_visuals_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Visuals"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_camera_fov"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Default Camera Field of View"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_camera_preset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Default Camera Preset"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_light_preset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Default Light Preset"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_emissive_strength"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Emissive Strength"/>
+
+            <RelativeLayout
+                    android:id="@+id/options_quality_toggle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                <TextView
+                        style="@style/PolyText"
+                        android:id="@+id/options_quality_toggle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="High Quality Specular"/>
+
+                <de.ankri.views.Switch
+                        style="@style/switch_light"
+                        android:id="@+id/options_quality_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/options_background_toggle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                <TextView
+                        style="@style/PolyText"
+                        android:id="@+id/options_background_toggle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="Show Background Image"/>
+
+                <de.ankri.views.Switch
+                        style="@style/switch_light"
+                        android:id="@+id/options_background_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_background_select"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Select Background Image"
+                    android:visibility="gone"/>
+
+            <RelativeLayout
+                    android:id="@+id/options_background_colour_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                <TextView
+                        style="@style/PolyText"
+                        android:id="@+id/options_background_colour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="Select Background Colour"/>
+
+                <TextView
+                        style="@style/PolyBackground.Light"
+                        android:id="@+id/options_background_colour_border"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="13dp"
+                        android:text=""/>
+
+                <TextView
+                        android:id="@+id/options_background_colour_preview"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#FF0000"
+                        android:text=""/>
+
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_misc_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Misc"/>
+
+            <RelativeLayout
+                    android:id="@+id/options_screen_toggle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000">
+
+                <TextView
+                        style="@style/PolyText"
+                        android:id="@+id/options_screen_toggle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="Force Screen On"/>
+
+                <de.ankri.views.Switch
+                        style="@style/switch_light"
+                        android:id="@+id/options_screen_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_delete_meshes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Delete Cached Models"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_reset_model_paths"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Reset Model Paths"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_reset_defaults"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Reset To Default Values"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_camera_reset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Reset Camera Presets"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_light_reset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="Reset Light Presets"/>
+
+            <TextView
+                    style="@style/PolyText"
+                    android:id="@+id/options_about_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="About Polyviewer"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

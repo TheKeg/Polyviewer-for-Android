@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/menu_item_load_poopoo" 
+        android:icon="@drawable/folder" 
+        android:showAsAction="always" 
+        android:title="Load The Spawn of Satan" 
+        android:titleCondensed="Oh Shi..." 
+        android:visible="true" />
+</menu>

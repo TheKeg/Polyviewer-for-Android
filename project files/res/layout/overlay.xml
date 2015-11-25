@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+    <ImageButton
+        android:id="@+id/selectionButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/camera" />
+	
+    <Button
+        android:id="@+id/specularButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/selectionButton"
+        android:layout_marginTop="0dp"
+        android:layout_margin="3dp"
+        android:background="#888888"
+        android:text="S"
+        android:textColor="#000000" />
+	 
+	 <Button
+        android:id="@+id/diffuseButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/specularButton"
+        android:layout_alignTop="@id/selectionButton"
+        android:layout_marginTop="0dp"
+        android:layout_margin="3dp"
+        android:background="#FFFFFF"
+        android:text="D"
+        android:textColor="#000000" />
+	 
+    <CheckBox
+        android:id="@+id/enabledCheckbox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/diffuseButton"
+        android:layout_alignTop="@id/selectionButton"
+        android:layout_marginTop="0dp"
+        android:layout_margin="3dp"
+        android:text="" />
+    
+    <TextView 
+        android:id="@+id/fpsCounter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:paddingBottom="5dp"
+        android:text="" />
+    
+    <CheckBox
+        android:id="@+id/enabledCameraLight"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_margin="3dp"
+        android:text="" />
+    
+    <TextView 
+        android:id="@+id/cameraLightText"
+        android:layout_toLeftOf="@id/enabledCameraLight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="5dp"
+        android:text="Enable Camera Light" />
+    
+</RelativeLayout>
